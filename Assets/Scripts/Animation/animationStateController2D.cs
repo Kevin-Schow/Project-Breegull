@@ -14,40 +14,23 @@ public class animationStateController2D : MonoBehaviour
     public float currentMaximumVelocity = 2.0f;
     public bool runToggle = true;
 
+    // Increase Performance
+    int VelocityZHash;
+    int VelocityXHash;
+
     void Start()
     {
         animator = GetComponent<Animator>();
+
+        VelocityZHash = Animator.StringToHash("Velocity Z");
+        VelocityXHash = Animator.StringToHash("Velocity X");
     }
 
-    void Update()
+    // Handles Acceleration and Deceleration
+    void changeVelocity(bool movePressed, bool strafeLeftPressed, bool strafeRightPressed, bool runToggle, float currentMaxVelocity)
     {
-        // Get key input from player
-        bool forwardPressed = Input.GetKey("w");
-        bool leftPressed = Input.GetKey("a");
-        bool rightPressed = Input.GetKey("d");
-        bool downPressed = Input.GetKey("s");
-        bool strafeLeftPressed = Input.GetKey("q");
-        bool strafeRightPressed = Input.GetKey("e");
-        bool runPressed = Input.GetKey("r");
-
-        // Swap runToggle
-        runToggle = runPressed ? false : true;
-
-        // Set currentMaximumVelocity
-        if (runToggle)
-        {
-            currentMaximumVelocity = maximumWalkVelocity;
-        }
-        if (!runToggle)
-        {
-            currentMaximumVelocity = maximumRunVelocity;
-        }
-        
-        // Run speed toggle - R
-        currentMaximumVelocity = runToggle ? maximumRunVelocity : maximumWalkVelocity;
-
         // Forward walk in any direction - WASD
-        if ((forwardPressed || leftPressed || rightPressed || downPressed) && velocityZ < currentMaximumVelocity)
+        if (movePressed && velocityZ < currentMaximumVelocity)
         {
             velocityZ += Time.deltaTime * acceleration;
         }
@@ -65,13 +48,28 @@ public class animationStateController2D : MonoBehaviour
         }
 
         // Decrease VelocityZ
-        if (!(forwardPressed || leftPressed || rightPressed || downPressed) && velocityZ > 0.0f)
+        if (!movePressed && velocityZ > 0.0f)
         {
             velocityZ -= Time.deltaTime * deceleration;
         }
 
+        // Approach 0 with VelocityX
+        if (!strafeLeftPressed && velocityX < 0.0f)
+        {
+            velocityX += Time.deltaTime * deceleration;
+        }
+        if (!strafeRightPressed && velocityX > 0.0f)
+        {
+            velocityX -= Time.deltaTime * deceleration;
+        }
+    }
+    // Handles locking or reseting velocity
+    void lockOrResetVelocity(bool movePressed, bool strafeLeftPressed, bool strafeRightPressed, bool runToggle, float currentMaxVelocity)
+    {
+        
+
         // Reset VelocityZ
-        if (!(forwardPressed || leftPressed || rightPressed || downPressed) && velocityZ < 0.0f)
+        if (!movePressed && velocityZ < 0.0f)
         {
             velocityZ = 0;
         }
@@ -100,12 +98,12 @@ public class animationStateController2D : MonoBehaviour
         }
 
         // lock forward
-        if ((forwardPressed || leftPressed || rightPressed || downPressed) && runToggle && velocityZ > currentMaximumVelocity)
+        if (movePressed && velocityZ > currentMaximumVelocity)
         {
             velocityZ = currentMaximumVelocity;
         }
         // decelerate to maximum walk velocity
-        else if ((forwardPressed || leftPressed || rightPressed || downPressed) && velocityZ > currentMaximumVelocity)
+        else if (movePressed && velocityZ > currentMaximumVelocity)
         {
             velocityZ -= Time.deltaTime * deceleration;
             // round to currentMaxVelocity if within offset
@@ -114,24 +112,51 @@ public class animationStateController2D : MonoBehaviour
                 velocityZ = currentMaximumVelocity;
             }
         }
-        else if ((forwardPressed || leftPressed || rightPressed || downPressed) && velocityZ < currentMaximumVelocity && velocityZ > (currentMaximumVelocity - 0.05f))
+        else if (movePressed && velocityZ < currentMaximumVelocity && velocityZ > (currentMaximumVelocity - 0.05f))
         {
             velocityZ = currentMaximumVelocity;
         }
-        
-        // Approach 0 with VelocityX
-        if (!strafeLeftPressed && velocityX < 0.0f)
-        {
-            velocityX += Time.deltaTime * deceleration;
-        }
-        if (!strafeRightPressed && velocityX > 0.0f)
-        {
-            velocityX -= Time.deltaTime * deceleration;
-        }
 
         // Set the parameters to our local variable values
-        animator.SetFloat("Velocity Z", velocityZ);
-        animator.SetFloat("Velocity X", velocityX);
+        animator.SetFloat(VelocityZHash, velocityZ);
+        animator.SetFloat(VelocityXHash, velocityX);
+    }
+    void Update()
+    {
+        // Get key input from player
+        bool forwardPressed = Input.GetKey(KeyCode.W);
+        bool leftPressed = Input.GetKey(KeyCode.A);
+        bool rightPressed = Input.GetKey(KeyCode.D);
+        bool downPressed = Input.GetKey(KeyCode.S);
+        bool strafeLeftPressed = Input.GetKey(KeyCode.Q);
+        bool strafeRightPressed = Input.GetKey(KeyCode.E);
+        bool runPressed = Input.GetKey(KeyCode.R);
+
+        // Moving if WASD pressed but not A and D or W and S
+        bool movePressed = forwardPressed || leftPressed || rightPressed || downPressed;
+        // TODO:  A or D, W or S
+
+        // Swap runToggle
+        // bool runToggle = runPressed ? false : true;
+        
+        // Set Current Max Velocity
+        currentMaximumVelocity = runToggle ? maximumRunVelocity : maximumWalkVelocity;
+
+        // Set currentMaximumVelocity
+        if (runToggle && runPressed)
+        {
+            currentMaximumVelocity = maximumRunVelocity;
+            runToggle = false;
+        }
+        if (!runToggle && runPressed)
+        {
+            currentMaximumVelocity = maximumWalkVelocity;
+            runToggle = true;
+        }
+
+        // Handle changes in velocity
+        changeVelocity(movePressed, strafeLeftPressed, strafeRightPressed, runToggle, currentMaximumVelocity);
+        lockOrResetVelocity(movePressed, strafeLeftPressed, strafeRightPressed, runToggle, currentMaximumVelocity);
 
     }
 }
