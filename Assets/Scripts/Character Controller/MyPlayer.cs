@@ -92,18 +92,24 @@ namespace KinematicCharacterController
             characterInputs.CrouchDown = Input.GetKeyDown(KeyCode.C);
             characterInputs.CrouchUp = Input.GetKeyUp(KeyCode.C);
             characterInputs.CrouchHeld = Input.GetKey(KeyCode.C);
-            characterInputs.ChargingDown = Input.GetKeyDown(KeyCode.E);
+            characterInputs.ChargingDown = Input.GetKeyDown(KeyCode.X);
             characterInputs.NoClipDown = Input.GetKeyUp(KeyCode.N);
             characterInputs.ClimbLadder = Input.GetKeyUp(KeyCode.F);
 
             // Apply inputs to character
             Character.SetInputs(ref characterInputs);
 
+            //Strafe Left
+            // if (Input.GetKeyDown(KeyCode.Q))
+            // {
+                
+            // }
+
             // Apply impulse
-            if (Input.GetKeyDown(KeyCode.Q))
+            if (Input.GetKeyDown(KeyCode.V))
             {
                 Character.Motor.ForceUnground(0.2f);
-                Character.AddVelocity(Vector3.up * 15f);
+                Character.AddVelocity(Vector3.up * 20f);
             }
         }
     }
