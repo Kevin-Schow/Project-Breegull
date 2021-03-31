@@ -1,0 +1,38 @@
+# Material file for banjo.obj
+
+newmtl material_0
+	Ns 0
+	d 1
+	illum 2
+	Kd 1.0 1.0 1.0
+	Ks 0.0 0.0 0.0
+	Ka 0.2 0.2 0.2
+	map_Kd untitled_color.png
+
+newmtl Material.005
+	Ns 200
+	d 1
+	illum 2
+	Kd 1.0 1.0 1.0
+	Ks 0.0 0.0 0.0
+	Ka 0.2 0.2 0.2
+	map_Kd 6AF49AC9_c.png
+
+newmtl Material.007
+	Ns 200
+	d 1
+	illum 2
+	Kd 1.0 1.0 1.0
+	Ks 0.0 0.0 0.0
+	Ka 0.2 0.2 0.2
+	map_Kd 4738139_c.png
+
+newmtl Material.008
+	Ns 200
+	d 1
+	illum 2
+	Kd 0.64 0.64 0.64
+	Ks 0.0 0.0 0.0
+	Ka 1.0 1.0 -1.0
+	map_Kd 62BC8E59_c.png
+

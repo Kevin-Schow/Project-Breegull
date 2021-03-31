@@ -1,0 +1,82 @@
+# Material file for mumbo.obj
+
+newmtl material_0002.001
+	Ns 96
+	d 1
+	illum 2
+	Kd 0.64 0.64 0.64
+	Ks 0.5 0.5 0.5
+	Ka 1.0 1.0 1.0
+	map_Kd image_0002.png
+
+newmtl material_0003.001
+	Ns 96
+	d 1
+	illum 2
+	Kd 0.64 0.64 0.64
+	Ks 0.5 0.5 0.5
+	Ka 1.0 1.0 1.0
+	map_Kd image_0003.png
+
+newmtl material_0004.001
+	Ns 96
+	d 1
+	illum 2
+	Kd 0.64 0.64 0.64
+	Ks 0.5 0.5 0.5
+	Ka 1.0 1.0 1.0
+	map_Kd image_0004.png
+
+newmtl material_0005.001
+	Ns 96
+	d 1
+	illum 2
+	Kd 0.64 0.64 0.64
+	Ks 0.5 0.5 0.5
+	Ka 1.0 1.0 1.0
+	map_Kd image_0005.png
+
+newmtl material_0006.001
+	Ns 96
+	d 1
+	illum 2
+	Kd 0.64 0.64 0.64
+	Ks 0.5 0.5 0.5
+	Ka 1.0 1.0 1.0
+	map_Kd mumbowand.png
+
+newmtl material_0009.001
+	Ns 96
+	d 1
+	illum 2
+	Kd 0.64 0.64 0.64
+	Ks 0.5 0.5 0.5
+	Ka 1.0 1.0 1.0
+	map_Kd image_0009.png
+
+newmtl material_null.001
+	Ns 96
+	d 1
+	illum 2
+	Kd 0.64 0.64 0.64
+	Ks 0.5 0.5 0.5
+	Ka 1.0 1.0 1.0
+
+newmtl material_null.001_Untitled.001
+	Ns 96
+	d 1
+	illum 2
+	Kd 0.64 0.64 0.64
+	Ks 0.5 0.5 0.5
+	Ka 1.0 1.0 1.0
+	map_Kd mumbowand.png
+
+newmtl material_null.002
+	Ns 96
+	d 1
+	illum 2
+	Kd 0.64 0.64 0.64
+	Ks 0.5 0.5 0.5
+	Ka 1.0 1.0 1.0
+	map_Kd mumbowand.png
+

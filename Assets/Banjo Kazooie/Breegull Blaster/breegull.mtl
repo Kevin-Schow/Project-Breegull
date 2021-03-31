@@ -1,0 +1,20 @@
+# Material file for breegull.obj
+
+newmtl material_0
+	Ns 0
+	d 1
+	illum 2
+	Kd 1.0 1.0 1.0
+	Ks 1.0 1.0 1.0
+	Ka 0.2 0.2 0.2
+	map_Kd untitled_color.png
+
+newmtl Shape.000
+	Ns 0
+	d 1
+	illum 2
+	Kd 0.790625 0.790625 0.790625
+	Ks 0.0 0.0 0.0
+	Ka 1.0 1.0 1.0
+	map_Kd 7E725715_c.png
+

@@ -1,0 +1,20 @@
+# Material file for jinjo.obj
+
+newmtl material_0001.013
+	Ns 96
+	d 1
+	illum 2
+	Kd 0.64 0.64 0.64
+	Ks 0.5 0.5 0.5
+	Ka 1.0 1.0 1.0
+	map_Kd eye_blue.png
+
+newmtl material_null.008
+	Ns 96
+	d 1
+	illum 2
+	Kd 0.64 0.64 0.64
+	Ks 0.5 0.5 0.5
+	Ka 1.0 1.0 1.0
+	map_Kd blue.png
+

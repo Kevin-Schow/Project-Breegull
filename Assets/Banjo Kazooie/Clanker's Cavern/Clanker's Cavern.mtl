@@ -1,0 +1,997 @@
+# 3ds Max Wavefront OBJ Exporter v0.94b - (c)2007 guruware
+# File Created: 07.03.2010 21:10:42
+
+newmtl SETTIMG_SEG_0x11C90
+	Ns 30.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 1.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.0000 0.0000 0.0000
+	Kd 0.5500 0.5500 0.5500
+	Ks 0.9000 0.9000 0.9000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka C:\Users\Public\Documents\Spriter's resource\Models\Banjo Kazooie\Clanker's Cavern\Clanker's Cavern\0x11C90.png
+	map_Kd C:\Users\Public\Documents\Spriter's resource\Models\Banjo Kazooie\Clanker's Cavern\Clanker's Cavern\0x11C90.png
+
+newmtl SETTIMG_SEG_0x124B0
+	Ns 30.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 1.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.0000 0.0000 0.0000
+	Kd 0.5500 0.5500 0.5500
+	Ks 0.9000 0.9000 0.9000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka C:\Users\Public\Documents\Spriter's resource\Models\Banjo Kazooie\Clanker's Cavern\Clanker's Cavern\0x124B0.png
+	map_Kd C:\Users\Public\Documents\Spriter's resource\Models\Banjo Kazooie\Clanker's Cavern\Clanker's Cavern\0x124B0.png
+
+newmtl SETTIMG_SEG_0x12CD0
+	Ns 30.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 1.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.0000 0.0000 0.0000
+	Kd 0.5500 0.5500 0.5500
+	Ks 0.9000 0.9000 0.9000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka C:\Users\Public\Documents\Spriter's resource\Models\Banjo Kazooie\Clanker's Cavern\Clanker's Cavern\0x12CD0.png
+	map_Kd C:\Users\Public\Documents\Spriter's resource\Models\Banjo Kazooie\Clanker's Cavern\Clanker's Cavern\0x12CD0.png
+
+newmtl SETTIMG_SEG_0x23A90
+	Ns 30.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 1.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.0000 0.0000 0.0000
+	Kd 0.5500 0.5500 0.5500
+	Ks 0.9000 0.9000 0.9000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka C:\Users\Public\Documents\Spriter's resource\Models\Banjo Kazooie\Clanker's Cavern\Clanker's Cavern\0x23A90.png
+	map_Kd C:\Users\Public\Documents\Spriter's resource\Models\Banjo Kazooie\Clanker's Cavern\Clanker's Cavern\0x23A90.png
+
+newmtl SETTIMG_SEG_0x14530
+	Ns 30.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 1.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.0000 0.0000 0.0000
+	Kd 0.5500 0.5500 0.5500
+	Ks 0.9000 0.9000 0.9000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka C:\Users\Public\Documents\Spriter's resource\Models\Banjo Kazooie\Clanker's Cavern\Clanker's Cavern\0x14530.png
+	map_Kd C:\Users\Public\Documents\Spriter's resource\Models\Banjo Kazooie\Clanker's Cavern\Clanker's Cavern\0x14530.png
+
+newmtl SETTIMG_SEG_0x1A230
+	Ns 30.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 1.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.0000 0.0000 0.0000
+	Kd 0.5500 0.5500 0.5500
+	Ks 0.9000 0.9000 0.9000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka C:\Users\Public\Documents\Spriter's resource\Models\Banjo Kazooie\Clanker's Cavern\Clanker's Cavern\0x1A230.png
+	map_Kd C:\Users\Public\Documents\Spriter's resource\Models\Banjo Kazooie\Clanker's Cavern\Clanker's Cavern\0x1A230.png
+
+newmtl SETTIMG_SEG_0x23270
+	Ns 30.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 1.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.0000 0.0000 0.0000
+	Kd 0.5500 0.5500 0.5500
+	Ks 0.9000 0.9000 0.9000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka C:\Users\Public\Documents\Spriter's resource\Models\Banjo Kazooie\Clanker's Cavern\Clanker's Cavern\0x23270.png
+	map_Kd C:\Users\Public\Documents\Spriter's resource\Models\Banjo Kazooie\Clanker's Cavern\Clanker's Cavern\0x23270.png
+
+newmtl SETTIMG_SEG_0x4D0
+	Ns 30.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 1.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.0000 0.0000 0.0000
+	Kd 0.5500 0.5500 0.5500
+	Ks 0.9000 0.9000 0.9000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka C:\Users\Public\Documents\Spriter's resource\Models\Banjo Kazooie\Clanker's Cavern\Clanker's Cavern\0x4D0.png
+	map_Kd C:\Users\Public\Documents\Spriter's resource\Models\Banjo Kazooie\Clanker's Cavern\Clanker's Cavern\0x4D0.png
+
+newmtl SETTIMG_SEG_0x191F0
+	Ns 30.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 1.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.0000 0.0000 0.0000
+	Kd 0.5500 0.5500 0.5500
+	Ks 0.9000 0.9000 0.9000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka C:\Users\Public\Documents\Spriter's resource\Models\Banjo Kazooie\Clanker's Cavern\Clanker's Cavern\0x191F0.png
+	map_Kd C:\Users\Public\Documents\Spriter's resource\Models\Banjo Kazooie\Clanker's Cavern\Clanker's Cavern\0x191F0.png
+
+newmtl SETTIMG_SEG_0xCF0
+	Ns 30.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 1.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.0000 0.0000 0.0000
+	Kd 0.5500 0.5500 0.5500
+	Ks 0.9000 0.9000 0.9000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka C:\Users\Public\Documents\Spriter's resource\Models\Banjo Kazooie\Clanker's Cavern\Clanker's Cavern\0xCF0.png
+	map_Kd C:\Users\Public\Documents\Spriter's resource\Models\Banjo Kazooie\Clanker's Cavern\Clanker's Cavern\0xCF0.png
+
+newmtl SETTIMG_SEG_0x14D50
+	Ns 30.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 1.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.0000 0.0000 0.0000
+	Kd 0.5500 0.5500 0.5500
+	Ks 0.9000 0.9000 0.9000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka C:\Users\Public\Documents\Spriter's resource\Models\Banjo Kazooie\Clanker's Cavern\Clanker's Cavern\0x14D50.png
+	map_Kd C:\Users\Public\Documents\Spriter's resource\Models\Banjo Kazooie\Clanker's Cavern\Clanker's Cavern\0x14D50.png
+
+newmtl SETTIMG_SEG_0x26330
+	Ns 30.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 1.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.0000 0.0000 0.0000
+	Kd 0.5500 0.5500 0.5500
+	Ks 0.9000 0.9000 0.9000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka C:\Users\Public\Documents\Spriter's resource\Models\Banjo Kazooie\Clanker's Cavern\Clanker's Cavern\0x26330.png
+	map_Kd C:\Users\Public\Documents\Spriter's resource\Models\Banjo Kazooie\Clanker's Cavern\Clanker's Cavern\0x26330.png
+
+newmtl SETTIMG_SEG_0x26B50
+	Ns 30.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 1.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.0000 0.0000 0.0000
+	Kd 0.5500 0.5500 0.5500
+	Ks 0.9000 0.9000 0.9000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka C:\Users\Public\Documents\Spriter's resource\Models\Banjo Kazooie\Clanker's Cavern\Clanker's Cavern\0x26B50.png
+	map_Kd C:\Users\Public\Documents\Spriter's resource\Models\Banjo Kazooie\Clanker's Cavern\Clanker's Cavern\0x26B50.png
+
+newmtl SETTIMG_SEG_0x252F0
+	Ns 30.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 1.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.0000 0.0000 0.0000
+	Kd 0.5500 0.5500 0.5500
+	Ks 0.9000 0.9000 0.9000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka C:\Users\Public\Documents\Spriter's resource\Models\Banjo Kazooie\Clanker's Cavern\Clanker's Cavern\0x252F0.png
+	map_Kd C:\Users\Public\Documents\Spriter's resource\Models\Banjo Kazooie\Clanker's Cavern\Clanker's Cavern\0x252F0.png
+
+newmtl SETTIMG_SEG_0x13D10
+	Ns 30.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 1.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.0000 0.0000 0.0000
+	Kd 0.5500 0.5500 0.5500
+	Ks 0.9000 0.9000 0.9000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka C:\Users\Public\Documents\Spriter's resource\Models\Banjo Kazooie\Clanker's Cavern\Clanker's Cavern\0x13D10.png
+	map_Kd C:\Users\Public\Documents\Spriter's resource\Models\Banjo Kazooie\Clanker's Cavern\Clanker's Cavern\0x13D10.png
+
+newmtl SETTIMG_SEG_0x134F0
+	Ns 30.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 1.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.0000 0.0000 0.0000
+	Kd 0.5500 0.5500 0.5500
+	Ks 0.9000 0.9000 0.9000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka C:\Users\Public\Documents\Spriter's resource\Models\Banjo Kazooie\Clanker's Cavern\Clanker's Cavern\0x134F0.png
+	map_Kd C:\Users\Public\Documents\Spriter's resource\Models\Banjo Kazooie\Clanker's Cavern\Clanker's Cavern\0x134F0.png
+
+newmtl SETTIMG_SEG_0x19A10
+	Ns 30.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 1.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.0000 0.0000 0.0000
+	Kd 0.5500 0.5500 0.5500
+	Ks 0.9000 0.9000 0.9000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka C:\Users\Public\Documents\Spriter's resource\Models\Banjo Kazooie\Clanker's Cavern\Clanker's Cavern\0x19A10.png
+	map_Kd C:\Users\Public\Documents\Spriter's resource\Models\Banjo Kazooie\Clanker's Cavern\Clanker's Cavern\0x19A10.png
+
+newmtl SETTIMG_SEG_0x3970
+	Ns 30.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 1.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.0000 0.0000 0.0000
+	Kd 0.5500 0.5500 0.5500
+	Ks 0.9000 0.9000 0.9000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka C:\Users\Public\Documents\Spriter's resource\Models\Banjo Kazooie\Clanker's Cavern\Clanker's Cavern\0x3970.png
+	map_Kd C:\Users\Public\Documents\Spriter's resource\Models\Banjo Kazooie\Clanker's Cavern\Clanker's Cavern\0x3970.png
+
+newmtl SETTIMG_SEG_0x25B10
+	Ns 30.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 1.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.0000 0.0000 0.0000
+	Kd 0.5500 0.5500 0.5500
+	Ks 0.9000 0.9000 0.9000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka C:\Users\Public\Documents\Spriter's resource\Models\Banjo Kazooie\Clanker's Cavern\Clanker's Cavern\0x25B10.png
+	map_Kd C:\Users\Public\Documents\Spriter's resource\Models\Banjo Kazooie\Clanker's Cavern\Clanker's Cavern\0x25B10.png
+
+newmtl SETTIMG_SEG_0x1D30
+	Ns 30.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 1.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.0000 0.0000 0.0000
+	Kd 0.5500 0.5500 0.5500
+	Ks 0.9000 0.9000 0.9000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka C:\Users\Public\Documents\Spriter's resource\Models\Banjo Kazooie\Clanker's Cavern\Clanker's Cavern\0x1D30.png
+	map_Kd C:\Users\Public\Documents\Spriter's resource\Models\Banjo Kazooie\Clanker's Cavern\Clanker's Cavern\0x1D30.png
+
+newmtl SETTIMG_SEG_0xC770
+	Ns 30.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 1.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.0000 0.0000 0.0000
+	Kd 0.5500 0.5500 0.5500
+	Ks 0.9000 0.9000 0.9000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka C:\Users\Public\Documents\Spriter's resource\Models\Banjo Kazooie\Clanker's Cavern\Clanker's Cavern\0xC770.png
+	map_Kd C:\Users\Public\Documents\Spriter's resource\Models\Banjo Kazooie\Clanker's Cavern\Clanker's Cavern\0xC770.png
+
+newmtl SETTIMG_SEG_0xB730
+	Ns 30.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 1.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.0000 0.0000 0.0000
+	Kd 0.5500 0.5500 0.5500
+	Ks 0.9000 0.9000 0.9000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka C:\Users\Public\Documents\Spriter's resource\Models\Banjo Kazooie\Clanker's Cavern\Clanker's Cavern\0xB730.png
+	map_Kd C:\Users\Public\Documents\Spriter's resource\Models\Banjo Kazooie\Clanker's Cavern\Clanker's Cavern\0xB730.png
+
+newmtl SETTIMG_SEG_0xBF50
+	Ns 30.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 1.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.0000 0.0000 0.0000
+	Kd 0.5500 0.5500 0.5500
+	Ks 0.9000 0.9000 0.9000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka C:\Users\Public\Documents\Spriter's resource\Models\Banjo Kazooie\Clanker's Cavern\Clanker's Cavern\0xBF50.png
+	map_Kd C:\Users\Public\Documents\Spriter's resource\Models\Banjo Kazooie\Clanker's Cavern\Clanker's Cavern\0xBF50.png
+
+newmtl SETTIMG_SEG_0x1510
+	Ns 30.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 1.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.0000 0.0000 0.0000
+	Kd 0.5500 0.5500 0.5500
+	Ks 0.9000 0.9000 0.9000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka C:\Users\Public\Documents\Spriter's resource\Models\Banjo Kazooie\Clanker's Cavern\Clanker's Cavern\0x1510.png
+	map_Kd C:\Users\Public\Documents\Spriter's resource\Models\Banjo Kazooie\Clanker's Cavern\Clanker's Cavern\0x1510.png
+
+newmtl SETTIMG_SEG_0x10050
+	Ns 30.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 1.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.0000 0.0000 0.0000
+	Kd 0.5500 0.5500 0.5500
+	Ks 0.9000 0.9000 0.9000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka C:\Users\Public\Documents\Spriter's resource\Models\Banjo Kazooie\Clanker's Cavern\Clanker's Cavern\0x10050.png
+	map_Kd C:\Users\Public\Documents\Spriter's resource\Models\Banjo Kazooie\Clanker's Cavern\Clanker's Cavern\0x10050.png
+
+newmtl SETTIMG_SEG_0xCF90
+	Ns 30.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 1.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.0000 0.0000 0.0000
+	Kd 0.5500 0.5500 0.5500
+	Ks 0.9000 0.9000 0.9000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka C:\Users\Public\Documents\Spriter's resource\Models\Banjo Kazooie\Clanker's Cavern\Clanker's Cavern\0xCF90.png
+	map_Kd C:\Users\Public\Documents\Spriter's resource\Models\Banjo Kazooie\Clanker's Cavern\Clanker's Cavern\0xCF90.png
+
+newmtl SETTIMG_SEG_0xF830
+	Ns 30.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 1.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.0000 0.0000 0.0000
+	Kd 0.5500 0.5500 0.5500
+	Ks 0.9000 0.9000 0.9000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka C:\Users\Public\Documents\Spriter's resource\Models\Banjo Kazooie\Clanker's Cavern\Clanker's Cavern\0xF830.png
+	map_Kd C:\Users\Public\Documents\Spriter's resource\Models\Banjo Kazooie\Clanker's Cavern\Clanker's Cavern\0xF830.png
+
+newmtl SETTIMG_SEG_0xA6F0
+	Ns 30.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 1.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.0000 0.0000 0.0000
+	Kd 0.5500 0.5500 0.5500
+	Ks 0.9000 0.9000 0.9000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka C:\Users\Public\Documents\Spriter's resource\Models\Banjo Kazooie\Clanker's Cavern\Clanker's Cavern\0xA6F0.png
+	map_Kd C:\Users\Public\Documents\Spriter's resource\Models\Banjo Kazooie\Clanker's Cavern\Clanker's Cavern\0xA6F0.png
+
+newmtl SETTIMG_SEG_0xF010
+	Ns 30.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 1.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.0000 0.0000 0.0000
+	Kd 0.5500 0.5500 0.5500
+	Ks 0.9000 0.9000 0.9000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka C:\Users\Public\Documents\Spriter's resource\Models\Banjo Kazooie\Clanker's Cavern\Clanker's Cavern\0xF010.png
+	map_Kd C:\Users\Public\Documents\Spriter's resource\Models\Banjo Kazooie\Clanker's Cavern\Clanker's Cavern\0xF010.png
+
+newmtl SETTIMG_SEG_0x9ED0
+	Ns 30.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 1.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.0000 0.0000 0.0000
+	Kd 0.5500 0.5500 0.5500
+	Ks 0.9000 0.9000 0.9000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka C:\Users\Public\Documents\Spriter's resource\Models\Banjo Kazooie\Clanker's Cavern\Clanker's Cavern\0x9ED0.png
+	map_Kd C:\Users\Public\Documents\Spriter's resource\Models\Banjo Kazooie\Clanker's Cavern\Clanker's Cavern\0x9ED0.png
+
+newmtl SETTIMG_SEG_0x7250
+	Ns 30.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 1.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.0000 0.0000 0.0000
+	Kd 0.5500 0.5500 0.5500
+	Ks 0.9000 0.9000 0.9000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka C:\Users\Public\Documents\Spriter's resource\Models\Banjo Kazooie\Clanker's Cavern\Clanker's Cavern\0x7250.png
+	map_Kd C:\Users\Public\Documents\Spriter's resource\Models\Banjo Kazooie\Clanker's Cavern\Clanker's Cavern\0x7250.png
+
+newmtl SETTIMG_SEG_0x10870
+	Ns 30.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 1.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.0000 0.0000 0.0000
+	Kd 0.5500 0.5500 0.5500
+	Ks 0.9000 0.9000 0.9000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka C:\Users\Public\Documents\Spriter's resource\Models\Banjo Kazooie\Clanker's Cavern\Clanker's Cavern\0x10870.png
+	map_Kd C:\Users\Public\Documents\Spriter's resource\Models\Banjo Kazooie\Clanker's Cavern\Clanker's Cavern\0x10870.png
+
+newmtl SETTIMG_SEG_0x6A30
+	Ns 30.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 1.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.0000 0.0000 0.0000
+	Kd 0.5500 0.5500 0.5500
+	Ks 0.9000 0.9000 0.9000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka C:\Users\Public\Documents\Spriter's resource\Models\Banjo Kazooie\Clanker's Cavern\Clanker's Cavern\0x6A30.png
+	map_Kd C:\Users\Public\Documents\Spriter's resource\Models\Banjo Kazooie\Clanker's Cavern\Clanker's Cavern\0x6A30.png
+
+newmtl SETTIMG_SEG_0x6210
+	Ns 30.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 1.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.0000 0.0000 0.0000
+	Kd 0.5500 0.5500 0.5500
+	Ks 0.9000 0.9000 0.9000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka C:\Users\Public\Documents\Spriter's resource\Models\Banjo Kazooie\Clanker's Cavern\Clanker's Cavern\0x6210.png
+	map_Kd C:\Users\Public\Documents\Spriter's resource\Models\Banjo Kazooie\Clanker's Cavern\Clanker's Cavern\0x6210.png
+
+newmtl SETTIMG_SEG_0x24AD0
+	Ns 30.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 1.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.0000 0.0000 0.0000
+	Kd 0.5500 0.5500 0.5500
+	Ks 0.9000 0.9000 0.9000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka C:\Users\Public\Documents\Spriter's resource\Models\Banjo Kazooie\Clanker's Cavern\Clanker's Cavern\0x24AD0.png
+	map_Kd C:\Users\Public\Documents\Spriter's resource\Models\Banjo Kazooie\Clanker's Cavern\Clanker's Cavern\0x24AD0.png
+
+newmtl SETTIMG_SEG_0x242B0
+	Ns 30.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 1.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.0000 0.0000 0.0000
+	Kd 0.5500 0.5500 0.5500
+	Ks 0.9000 0.9000 0.9000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka C:\Users\Public\Documents\Spriter's resource\Models\Banjo Kazooie\Clanker's Cavern\Clanker's Cavern\0x242B0.png
+	map_Kd C:\Users\Public\Documents\Spriter's resource\Models\Banjo Kazooie\Clanker's Cavern\Clanker's Cavern\0x242B0.png
+
+newmtl SETTIMG_SEG_0x49B0
+	Ns 30.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 1.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.0000 0.0000 0.0000
+	Kd 0.5500 0.5500 0.5500
+	Ks 0.9000 0.9000 0.9000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka C:\Users\Public\Documents\Spriter's resource\Models\Banjo Kazooie\Clanker's Cavern\Clanker's Cavern\0x49B0.png
+	map_Kd C:\Users\Public\Documents\Spriter's resource\Models\Banjo Kazooie\Clanker's Cavern\Clanker's Cavern\0x49B0.png
+
+newmtl SETTIMG_SEG_0x2550
+	Ns 30.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 1.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.0000 0.0000 0.0000
+	Kd 0.5500 0.5500 0.5500
+	Ks 0.9000 0.9000 0.9000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka C:\Users\Public\Documents\Spriter's resource\Models\Banjo Kazooie\Clanker's Cavern\Clanker's Cavern\0x2550.png
+	map_Kd C:\Users\Public\Documents\Spriter's resource\Models\Banjo Kazooie\Clanker's Cavern\Clanker's Cavern\0x2550.png
+
+newmtl SETTIMG_SEG_0x51D0
+	Ns 30.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 1.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.0000 0.0000 0.0000
+	Kd 0.5500 0.5500 0.5500
+	Ks 0.9000 0.9000 0.9000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka C:\Users\Public\Documents\Spriter's resource\Models\Banjo Kazooie\Clanker's Cavern\Clanker's Cavern\0x51D0.png
+	map_Kd C:\Users\Public\Documents\Spriter's resource\Models\Banjo Kazooie\Clanker's Cavern\Clanker's Cavern\0x51D0.png
+
+newmtl SETTIMG_SEG_0x4190
+	Ns 30.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 1.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.0000 0.0000 0.0000
+	Kd 0.5500 0.5500 0.5500
+	Ks 0.9000 0.9000 0.9000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka C:\Users\Public\Documents\Spriter's resource\Models\Banjo Kazooie\Clanker's Cavern\Clanker's Cavern\0x4190.png
+	map_Kd C:\Users\Public\Documents\Spriter's resource\Models\Banjo Kazooie\Clanker's Cavern\Clanker's Cavern\0x4190.png
+
+newmtl SETTIMG_SEG_0x165B0
+	Ns 30.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 1.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.0000 0.0000 0.0000
+	Kd 0.5500 0.5500 0.5500
+	Ks 0.9000 0.9000 0.9000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka C:\Users\Public\Documents\Spriter's resource\Models\Banjo Kazooie\Clanker's Cavern\Clanker's Cavern\0x165B0.png
+	map_Kd C:\Users\Public\Documents\Spriter's resource\Models\Banjo Kazooie\Clanker's Cavern\Clanker's Cavern\0x165B0.png
+
+newmtl SETTIMG_SEG_0x15D90
+	Ns 30.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 1.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.0000 0.0000 0.0000
+	Kd 0.5500 0.5500 0.5500
+	Ks 0.9000 0.9000 0.9000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka C:\Users\Public\Documents\Spriter's resource\Models\Banjo Kazooie\Clanker's Cavern\Clanker's Cavern\0x15D90.png
+	map_Kd C:\Users\Public\Documents\Spriter's resource\Models\Banjo Kazooie\Clanker's Cavern\Clanker's Cavern\0x15D90.png
+
+newmtl SETTIMG_SEG_0x15570
+	Ns 30.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 1.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.0000 0.0000 0.0000
+	Kd 0.5500 0.5500 0.5500
+	Ks 0.9000 0.9000 0.9000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka C:\Users\Public\Documents\Spriter's resource\Models\Banjo Kazooie\Clanker's Cavern\Clanker's Cavern\0x15570.png
+	map_Kd C:\Users\Public\Documents\Spriter's resource\Models\Banjo Kazooie\Clanker's Cavern\Clanker's Cavern\0x15570.png
+
+newmtl SETTIMG_SEG_0x16DD0
+	Ns 30.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 1.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.0000 0.0000 0.0000
+	Kd 0.5500 0.5500 0.5500
+	Ks 0.9000 0.9000 0.9000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka C:\Users\Public\Documents\Spriter's resource\Models\Banjo Kazooie\Clanker's Cavern\Clanker's Cavern\0x16DD0.png
+	map_Kd C:\Users\Public\Documents\Spriter's resource\Models\Banjo Kazooie\Clanker's Cavern\Clanker's Cavern\0x16DD0.png
+
+newmtl SETTIMG_SEG_0x27F70
+	Ns 30.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 1.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.0000 0.0000 0.0000
+	Kd 0.5500 0.5500 0.5500
+	Ks 0.9000 0.9000 0.9000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka C:\Users\Public\Documents\Spriter's resource\Models\Banjo Kazooie\Clanker's Cavern\Clanker's Cavern\0x27F70.png
+	map_Kd C:\Users\Public\Documents\Spriter's resource\Models\Banjo Kazooie\Clanker's Cavern\Clanker's Cavern\0x27F70.png
+
+newmtl SETTIMG_SEG_0x59F0
+	Ns 30.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 1.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.0000 0.0000 0.0000
+	Kd 0.5500 0.5500 0.5500
+	Ks 0.9000 0.9000 0.9000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka C:\Users\Public\Documents\Spriter's resource\Models\Banjo Kazooie\Clanker's Cavern\Clanker's Cavern\0x59F0.png
+	map_Kd C:\Users\Public\Documents\Spriter's resource\Models\Banjo Kazooie\Clanker's Cavern\Clanker's Cavern\0x59F0.png
+
+newmtl SETTIMG_SEG_0x27350
+	Ns 30.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 1.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.0000 0.0000 0.0000
+	Kd 0.5500 0.5500 0.5500
+	Ks 0.9000 0.9000 0.9000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka C:\Users\Public\Documents\Spriter's resource\Models\Banjo Kazooie\Clanker's Cavern\Clanker's Cavern\0x27350.png
+	map_Kd C:\Users\Public\Documents\Spriter's resource\Models\Banjo Kazooie\Clanker's Cavern\Clanker's Cavern\0x27350.png
+
+newmtl SETTIMG_SEG_0x7A70
+	Ns 30.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 1.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.0000 0.0000 0.0000
+	Kd 0.5500 0.5500 0.5500
+	Ks 0.9000 0.9000 0.9000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka C:\Users\Public\Documents\Spriter's resource\Models\Banjo Kazooie\Clanker's Cavern\Clanker's Cavern\0x7A70.png
+	map_Kd C:\Users\Public\Documents\Spriter's resource\Models\Banjo Kazooie\Clanker's Cavern\Clanker's Cavern\0x7A70.png
+
+newmtl SETTIMG_SEG_0x8AB0
+	Ns 30.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 1.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.0000 0.0000 0.0000
+	Kd 0.5500 0.5500 0.5500
+	Ks 0.9000 0.9000 0.9000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka C:\Users\Public\Documents\Spriter's resource\Models\Banjo Kazooie\Clanker's Cavern\Clanker's Cavern\0x8AB0.png
+	map_Kd C:\Users\Public\Documents\Spriter's resource\Models\Banjo Kazooie\Clanker's Cavern\Clanker's Cavern\0x8AB0.png
+
+newmtl SETTIMG_SEG_0x8290
+	Ns 30.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 1.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.0000 0.0000 0.0000
+	Kd 0.5500 0.5500 0.5500
+	Ks 0.9000 0.9000 0.9000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka C:\Users\Public\Documents\Spriter's resource\Models\Banjo Kazooie\Clanker's Cavern\Clanker's Cavern\0x8290.png
+	map_Kd C:\Users\Public\Documents\Spriter's resource\Models\Banjo Kazooie\Clanker's Cavern\Clanker's Cavern\0x8290.png
+
+newmtl SETTIMG_SEG_0x92B0
+	Ns 30.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 1.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.0000 0.0000 0.0000
+	Kd 0.5500 0.5500 0.5500
+	Ks 0.9000 0.9000 0.9000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka C:\Users\Public\Documents\Spriter's resource\Models\Banjo Kazooie\Clanker's Cavern\Clanker's Cavern\0x92B0.png
+	map_Kd C:\Users\Public\Documents\Spriter's resource\Models\Banjo Kazooie\Clanker's Cavern\Clanker's Cavern\0x92B0.png
+
+newmtl SETTIMG_SEG_0x28790
+	Ns 30.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 1.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.0000 0.0000 0.0000
+	Kd 0.5500 0.5500 0.5500
+	Ks 0.9000 0.9000 0.9000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka C:\Users\Public\Documents\Spriter's resource\Models\Banjo Kazooie\Clanker's Cavern\Clanker's Cavern\0x28790.png
+	map_Kd C:\Users\Public\Documents\Spriter's resource\Models\Banjo Kazooie\Clanker's Cavern\Clanker's Cavern\0x28790.png
+
+newmtl SETTIMG_SEG_0x11070
+	Ns 30.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 1.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.0000 0.0000 0.0000
+	Kd 0.5500 0.5500 0.5500
+	Ks 0.9000 0.9000 0.9000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka C:\Users\Public\Documents\Spriter's resource\Models\Banjo Kazooie\Clanker's Cavern\Clanker's Cavern\0x11070.png
+	map_Kd C:\Users\Public\Documents\Spriter's resource\Models\Banjo Kazooie\Clanker's Cavern\Clanker's Cavern\0x11070.png
+
+newmtl SETTIMG_SEG_0x22A50
+	Ns 30.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 1.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.0000 0.0000 0.0000
+	Kd 0.5500 0.5500 0.5500
+	Ks 0.9000 0.9000 0.9000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka C:\Users\Public\Documents\Spriter's resource\Models\Banjo Kazooie\Clanker's Cavern\Clanker's Cavern\0x22A50.png
+	map_Kd C:\Users\Public\Documents\Spriter's resource\Models\Banjo Kazooie\Clanker's Cavern\Clanker's Cavern\0x22A50.png
+
+newmtl SETTIMG_SEG_0xD7B0
+	Ns 30.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 1.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.0000 0.0000 0.0000
+	Kd 0.5500 0.5500 0.5500
+	Ks 0.9000 0.9000 0.9000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka C:\Users\Public\Documents\Spriter's resource\Models\Banjo Kazooie\Clanker's Cavern\Clanker's Cavern\0xD7B0.png
+	map_Kd C:\Users\Public\Documents\Spriter's resource\Models\Banjo Kazooie\Clanker's Cavern\Clanker's Cavern\0xD7B0.png
+
+newmtl SETTIMG_SEG_0xDFD0
+	Ns 30.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 1.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.0000 0.0000 0.0000
+	Kd 0.5500 0.5500 0.5500
+	Ks 0.9000 0.9000 0.9000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka C:\Users\Public\Documents\Spriter's resource\Models\Banjo Kazooie\Clanker's Cavern\Clanker's Cavern\0xDFD0.png
+	map_Kd C:\Users\Public\Documents\Spriter's resource\Models\Banjo Kazooie\Clanker's Cavern\Clanker's Cavern\0xDFD0.png
+
+newmtl SETTIMG_SEG_0x175D0
+	Ns 30.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 1.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.0000 0.0000 0.0000
+	Kd 0.5500 0.5500 0.5500
+	Ks 0.9000 0.9000 0.9000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka C:\Users\Public\Documents\Spriter's resource\Models\Banjo Kazooie\Clanker's Cavern\Clanker's Cavern\0x175D0.png
+	map_Kd C:\Users\Public\Documents\Spriter's resource\Models\Banjo Kazooie\Clanker's Cavern\Clanker's Cavern\0x175D0.png
+
+newmtl SETTIMG_SEG_0xAF10
+	Ns 30.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 1.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.0000 0.0000 0.0000
+	Kd 0.5500 0.5500 0.5500
+	Ks 0.9000 0.9000 0.9000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka C:\Users\Public\Documents\Spriter's resource\Models\Banjo Kazooie\Clanker's Cavern\Clanker's Cavern\0xAF10.png
+	map_Kd C:\Users\Public\Documents\Spriter's resource\Models\Banjo Kazooie\Clanker's Cavern\Clanker's Cavern\0xAF10.png
+
+newmtl SETTIMG_SEG_0x185D0
+	Ns 30.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 1.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.0000 0.0000 0.0000
+	Kd 0.5500 0.5500 0.5500
+	Ks 0.9000 0.9000 0.9000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka C:\Users\Public\Documents\Spriter's resource\Models\Banjo Kazooie\Clanker's Cavern\Clanker's Cavern\0x185D0.png
+	map_Kd C:\Users\Public\Documents\Spriter's resource\Models\Banjo Kazooie\Clanker's Cavern\Clanker's Cavern\0x185D0.png
+	map_d C:\Users\Public\Documents\Spriter's resource\Models\Banjo Kazooie\Clanker's Cavern\Clanker's Cavern\0x185D0.png
+
+newmtl SETTIMG_SEG_0x293D0
+	Ns 30.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 1.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.0000 0.0000 0.0000
+	Kd 0.5500 0.5500 0.5500
+	Ks 0.9000 0.9000 0.9000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka C:\Users\Public\Documents\Spriter's resource\Models\Banjo Kazooie\Clanker's Cavern\Clanker's Cavern\0x293D0.png
+	map_Kd C:\Users\Public\Documents\Spriter's resource\Models\Banjo Kazooie\Clanker's Cavern\Clanker's Cavern\0x293D0.png
+
+newmtl SETTIMG_SEG_0x2D50
+	Ns 30.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 1.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.0000 0.0000 0.0000
+	Kd 0.5500 0.5500 0.5500
+	Ks 0.9000 0.9000 0.9000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka C:\Users\Public\Documents\Spriter's resource\Models\Banjo Kazooie\Clanker's Cavern\Clanker's Cavern\0x2D50.png
+	map_Kd C:\Users\Public\Documents\Spriter's resource\Models\Banjo Kazooie\Clanker's Cavern\Clanker's Cavern\0x2D50.png
+
+newmtl SETTIMG_SEG_0x28BB0
+	Ns 30.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 1.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.0000 0.0000 0.0000
+	Kd 0.5500 0.5500 0.5500
+	Ks 0.9000 0.9000 0.9000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka C:\Users\Public\Documents\Spriter's resource\Models\Banjo Kazooie\Clanker's Cavern\Clanker's Cavern\0x28BB0.png
+	map_Kd C:\Users\Public\Documents\Spriter's resource\Models\Banjo Kazooie\Clanker's Cavern\Clanker's Cavern\0x28BB0.png
+
+newmtl SETTIMG_SEG_0x1EA30
+	Ns 30.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 1.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.0000 0.0000 0.0000
+	Kd 0.5500 0.5500 0.5500
+	Ks 0.9000 0.9000 0.9000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka C:\Users\Public\Documents\Spriter's resource\Models\Banjo Kazooie\Clanker's Cavern\Clanker's Cavern\0x1EA30.png
+	map_Kd C:\Users\Public\Documents\Spriter's resource\Models\Banjo Kazooie\Clanker's Cavern\Clanker's Cavern\0x1EA30.png
+
+newmtl SETTIMG_SEG_0x20A30
+	Ns 30.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 1.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.0000 0.0000 0.0000
+	Kd 0.5500 0.5500 0.5500
+	Ks 0.9000 0.9000 0.9000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka C:\Users\Public\Documents\Spriter's resource\Models\Banjo Kazooie\Clanker's Cavern\Clanker's Cavern\0x20A30.png
+	map_Kd C:\Users\Public\Documents\Spriter's resource\Models\Banjo Kazooie\Clanker's Cavern\Clanker's Cavern\0x20A30.png
+
+newmtl SETTIMG_SEG_0x1CA30
+	Ns 30.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 1.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.0000 0.0000 0.0000
+	Kd 0.5500 0.5500 0.5500
+	Ks 0.9000 0.9000 0.9000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka C:\Users\Public\Documents\Spriter's resource\Models\Banjo Kazooie\Clanker's Cavern\Clanker's Cavern\0x1CA30.png
+	map_Kd C:\Users\Public\Documents\Spriter's resource\Models\Banjo Kazooie\Clanker's Cavern\Clanker's Cavern\0x1CA30.png
+
+newmtl SETTIMG_SEG_0x1FA30
+	Ns 30.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 1.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.0000 0.0000 0.0000
+	Kd 0.5500 0.5500 0.5500
+	Ks 0.9000 0.9000 0.9000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka C:\Users\Public\Documents\Spriter's resource\Models\Banjo Kazooie\Clanker's Cavern\Clanker's Cavern\0x1FA30.png
+	map_Kd C:\Users\Public\Documents\Spriter's resource\Models\Banjo Kazooie\Clanker's Cavern\Clanker's Cavern\0x1FA30.png
+
+newmtl SETTIMG_SEG_0x21A30
+	Ns 30.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 1.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.0000 0.0000 0.0000
+	Kd 0.5500 0.5500 0.5500
+	Ks 0.9000 0.9000 0.9000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka C:\Users\Public\Documents\Spriter's resource\Models\Banjo Kazooie\Clanker's Cavern\Clanker's Cavern\0x21A30.png
+	map_Kd C:\Users\Public\Documents\Spriter's resource\Models\Banjo Kazooie\Clanker's Cavern\Clanker's Cavern\0x21A30.png
+
+newmtl SETTIMG_SEG_0xE7F0
+	Ns 30.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 1.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.0000 0.0000 0.0000
+	Kd 0.5500 0.5500 0.5500
+	Ks 0.9000 0.9000 0.9000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka C:\Users\Public\Documents\Spriter's resource\Models\Banjo Kazooie\Clanker's Cavern\Clanker's Cavern\0xE7F0.png
+	map_Kd C:\Users\Public\Documents\Spriter's resource\Models\Banjo Kazooie\Clanker's Cavern\Clanker's Cavern\0xE7F0.png
+
+newmtl SETTIMG_SEG_0x1BA30
+	Ns 30.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 1.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.0000 0.0000 0.0000
+	Kd 0.5500 0.5500 0.5500
+	Ks 0.9000 0.9000 0.9000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka C:\Users\Public\Documents\Spriter's resource\Models\Banjo Kazooie\Clanker's Cavern\Clanker's Cavern\0x1BA30.png
+	map_Kd C:\Users\Public\Documents\Spriter's resource\Models\Banjo Kazooie\Clanker's Cavern\Clanker's Cavern\0x1BA30.png
+
+newmtl SETTIMG_SEG_0x1DA30
+	Ns 30.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 1.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.0000 0.0000 0.0000
+	Kd 0.5500 0.5500 0.5500
+	Ks 0.9000 0.9000 0.9000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka C:\Users\Public\Documents\Spriter's resource\Models\Banjo Kazooie\Clanker's Cavern\Clanker's Cavern\0x1DA30.png
+	map_Kd C:\Users\Public\Documents\Spriter's resource\Models\Banjo Kazooie\Clanker's Cavern\Clanker's Cavern\0x1DA30.png
+
+newmtl SETTIMG_SEG_0x1AA30
+	Ns 30.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 1.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.0000 0.0000 0.0000
+	Kd 0.5500 0.5500 0.5500
+	Ks 0.9000 0.9000 0.9000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka C:\Users\Public\Documents\Spriter's resource\Models\Banjo Kazooie\Clanker's Cavern\Clanker's Cavern\0x1AA30.png
+	map_Kd C:\Users\Public\Documents\Spriter's resource\Models\Banjo Kazooie\Clanker's Cavern\Clanker's Cavern\0x1AA30.png

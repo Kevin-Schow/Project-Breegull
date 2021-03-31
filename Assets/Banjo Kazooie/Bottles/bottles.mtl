@@ -1,0 +1,63 @@
+# Material file for bottles.obj
+
+newmtl material_0001
+	Ns 96
+	d 1
+	illum 2
+	Kd 0.64 0.64 0.64
+	Ks 0.5 0.5 0.5
+	Ka 1.0 1.0 1.0
+	map_Kd image_0001.png
+
+newmtl material_0003.003
+	Ns 96
+	d 1
+	illum 2
+	Kd 0.64 0.64 0.64
+	Ks 0.5 0.5 0.5
+	Ka 1.0 1.0 1.0
+	map_Kd image_0003.png
+
+newmtl material_0005.001
+	Ns 96
+	d 1
+	illum 2
+	Kd 0.64 0.64 0.64
+	Ks 0.5 0.5 0.5
+	Ka 1.0 1.0 1.0
+	map_Kd image_0005.png
+
+newmtl material_null
+	Ns 96
+	d 1
+	illum 2
+	Kd 0.64 0.64 0.64
+	Ks 0.5 0.5 0.5
+	Ka 1.0 1.0 1.0
+
+newmtl material_null.002
+	Ns 96
+	d 1
+	illum 2
+	Kd 0.64 0.64 0.64
+	Ks 0.5 0.5 0.5
+	Ka 1.0 1.0 1.0
+
+newmtl material_null.003
+	Ns 96
+	d 1
+	illum 2
+	Kd 0.64 0.64 0.64
+	Ks 0.5 0.5 0.5
+	Ka 1.0 1.0 1.0
+	map_Kd bottles.png
+
+newmtl material_null_Untitled
+	Ns 96
+	d 1
+	illum 2
+	Kd 0.64 0.64 0.64
+	Ks 0.5 0.5 0.5
+	Ka 1.0 1.0 1.0
+	map_Kd bottles.png
+
