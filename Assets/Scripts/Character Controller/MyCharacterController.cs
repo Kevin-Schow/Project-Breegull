@@ -64,6 +64,10 @@ namespace KinematicCharacterController
         public float MaxStableMoveSpeed = 10f;
         public float StableMovementSharpness = 15f;
         public float OrientationSharpness = 10f;
+        public float MaxSlopeRunEnergy = 4f;
+        public float SlopeRunEnergy = 4f;
+        public float SlideSpeed = 5f;
+        public float SlideAngle = -0.2f;
         public OrientationMethod OrientationMethod = OrientationMethod.TowardsCamera;
 
         [Header("Air Movement")]
@@ -559,6 +563,37 @@ namespace KinematicCharacterController
 
                             // Reorient velocity on slope
                             currentVelocity = Motor.GetDirectionTangentToSurface(currentVelocity, effectiveGroundNormal) * currentVelocityMagnitude;
+                            
+                            // TEST
+                            // if (effectiveGroundNormal[2] < SlideAngle && SlopeRunEnergy > 0)
+                            // {
+                            //     SlopeRunEnergy -= 0.1f;
+                            // }
+                            // if (SlopeRunEnergy < 0)
+                            // {
+                            //     SlopeRunEnergy = 0;
+                            // }
+                            // if (SlopeRunEnergy > MaxSlopeRunEnergy)
+                            // {
+                            //     SlopeRunEnergy = MaxSlopeRunEnergy;
+                            // }
+                            // if (effectiveGroundNormal[2] < SlideAngle) //&& SlopeRunEnergy == 0
+                            // {
+                            //     _isSliding = true;
+                            // }
+                            // if (effectiveGroundNormal[2] >= 0)
+                            // {
+                            //     _isSliding = false;
+                            // }
+                            // if (SlopeRunEnergy < MaxSlopeRunEnergy && _isSliding == false)
+                            // {
+                            //     SlopeRunEnergy += 0.1f;
+                            // }
+                            // if (_isSliding == true && SlopeRunEnergy == 0)
+                            // {
+                            //     // currentVelocity = Motor.GetDirectionTangentToSurface(currentVelocity, effectiveGroundNormal + Gravity);
+                            //     currentVelocity += effectiveGroundNormal * SlideSpeed;
+                            // }
 
                             // Calculate target velocity
                             Vector3 inputRight = Vector3.Cross(_moveInputVector, Motor.CharacterUp);
@@ -644,7 +679,8 @@ namespace KinematicCharacterController
                                 if (_canWallJump)
                                 {
                                     // Wall jump, Vector3.up adds vertical velocity
-                                    jumpDirection = _wallJumpNormal + Vector3.up;
+                                    // jumpDirection = _wallJumpNormal + Vector3.up;
+                                    jumpDirection = Vector3.ClampMagnitude(_wallJumpNormal + Vector3.up, 1);
                                 }
                                 else if (Motor.GroundingStatus.FoundAnyGround && !Motor.GroundingStatus.IsStableOnGround)
                                 {
