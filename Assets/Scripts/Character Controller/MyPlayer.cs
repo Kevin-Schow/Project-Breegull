@@ -2,13 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using KinematicCharacterController;
+using ThirdPersonCameraWithLockOn;
 
 namespace KinematicCharacterController
 {
     public class MyPlayer : MonoBehaviour
     {
         public MyCharacterController Character;
-        public MyCharacterCamera CharacterCamera;
+        public ThirdPersonCamera CharacterCamera;
 
         private const string MouseXInput = "Mouse X";
         private const string MouseYInput = "Mouse Y";
@@ -21,11 +22,11 @@ namespace KinematicCharacterController
             Cursor.lockState = CursorLockMode.Locked;
 
             // Tell camera to follow transform
-            CharacterCamera.SetFollowTransform(Character.CameraFollowPoint);
+            // CharacterCamera.SetFollowTransform(Character.CameraFollowPoint); // OLD CAMERA
 
             // Ignore the character's collider(s) for camera obstruction checks
-            CharacterCamera.IgnoredColliders.Clear();
-            CharacterCamera.IgnoredColliders.AddRange(Character.GetComponentsInChildren<Collider>());
+            // CharacterCamera.IgnoredColliders.Clear(); // OLD CAMERA
+            // CharacterCamera.IgnoredColliders.AddRange(Character.GetComponentsInChildren<Collider>()); // OLD CAMERA
         }
 
         private void Update()
@@ -41,11 +42,11 @@ namespace KinematicCharacterController
         private void LateUpdate()
         {
             // Handle rotating the camera along with physics movers
-            if (CharacterCamera.RotateWithPhysicsMover && Character.Motor.AttachedRigidbody != null)
-            {
-                CharacterCamera.PlanarDirection = Character.Motor.AttachedRigidbody.GetComponent<PhysicsMover>().RotationDeltaFromInterpolation * CharacterCamera.PlanarDirection;
-                CharacterCamera.PlanarDirection = Vector3.ProjectOnPlane(CharacterCamera.PlanarDirection, Character.Motor.CharacterUp).normalized;
-            }
+            // if (CharacterCamera.RotateWithPhysicsMover && Character.Motor.AttachedRigidbody != null)
+            // {
+            //     CharacterCamera.PlanarDirection = Character.Motor.AttachedRigidbody.GetComponent<PhysicsMover>().RotationDeltaFromInterpolation * CharacterCamera.PlanarDirection;
+            //     CharacterCamera.PlanarDirection = Vector3.ProjectOnPlane(CharacterCamera.PlanarDirection, Character.Motor.CharacterUp).normalized;
+            // }
 
             HandleCameraInput();
         }
@@ -64,19 +65,18 @@ namespace KinematicCharacterController
             }
 
             // Input for zooming the camera (disabled in WebGL because it can cause problems)
-            float scrollInput = -Input.GetAxis(MouseScrollInput);
-#if UNITY_WEBGL
-        scrollInput = 0f;
-#endif
-
+            // float scrollInput = -Input.GetAxis(MouseScrollInput);
+// #if UNITY_WEBGL
+//         scrollInput = 0f;
+// #endif
             // Apply inputs to the camera
-            CharacterCamera.UpdateWithInput(Time.deltaTime, scrollInput, lookInputVector);
+            // CharacterCamera.UpdateWithInput(Time.deltaTime, scrollInput, lookInputVector); // OLD CAMERA
 
-            // Handle toggling zoom level
-            if (Input.GetMouseButtonDown(1))
-            {
-                CharacterCamera.TargetDistance = (CharacterCamera.TargetDistance == 0f) ? CharacterCamera.DefaultDistance : 0f;
-            }
+            // Handle toggling zoom level // OLD CAMERA
+            // if (Input.GetMouseButtonDown(1))
+            // {
+            //     CharacterCamera.TargetDistance = (CharacterCamera.TargetDistance == 0f) ? CharacterCamera.DefaultDistance : 0f;
+            // }
         }
 
         private void HandleCharacterInput()
@@ -86,9 +86,11 @@ namespace KinematicCharacterController
             // Build the CharacterInputs struct
             characterInputs.MoveAxisForward = Input.GetAxisRaw(VerticalInput);
             characterInputs.MoveAxisRight = Input.GetAxisRaw(HorizontalInput);
-            characterInputs.CameraRotation = CharacterCamera.Transform.rotation;
+            characterInputs.CameraRotation = CharacterCamera.transform.rotation; // OLD CAMERA
             characterInputs.JumpDown = Input.GetKeyDown(KeyCode.Space);
             characterInputs.JumpHeld = Input.GetKey(KeyCode.Space);
+            // characterInputs.JumpDown = Input.GetButtonDown("XboxA");
+            // characterInputs.JumpHeld = Input.GetButton("XboxA");
             characterInputs.CrouchDown = Input.GetKeyDown(KeyCode.C);
             characterInputs.CrouchUp = Input.GetKeyUp(KeyCode.C);
             characterInputs.CrouchHeld = Input.GetKey(KeyCode.C);

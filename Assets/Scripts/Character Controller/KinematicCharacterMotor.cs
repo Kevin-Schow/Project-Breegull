@@ -201,7 +201,10 @@ namespace KinematicCharacterController
         /// </summary>    
         [Range(0f, 89f)]
         [Tooltip("Maximum slope angle on which the character can be stable")]
-        public float MaxStableSlopeAngle = 60f;
+        public float MaxStableSlopeAngle = 40f;
+        public float _maxSlopeEnergy = 10f;
+        public float _slopeEnergy = 10f;
+        public float _slopeEnergyDrain = 1f;
         /// <summary>
         /// Which layers can the character be considered stable on
         /// </summary>    
@@ -1205,7 +1208,25 @@ namespace KinematicCharacterController
         /// </summary>
         private bool IsStableOnNormal(Vector3 normal)
         {
-            return Vector3.Angle(_characterUp, normal) <= MaxStableSlopeAngle;
+            if (Vector3.Angle(_characterUp, normal) > MaxStableSlopeAngle)
+            {
+                _slopeEnergy -= _slopeEnergyDrain * Time.deltaTime;
+            }
+            else if (Vector3.Angle(_characterUp, normal) <= MaxStableSlopeAngle)
+            {
+                _slopeEnergy += _slopeEnergyDrain * 5 * Time.deltaTime;
+            }
+            if (_slopeEnergy > _maxSlopeEnergy)
+            {
+                _slopeEnergy = _maxSlopeEnergy;
+            }
+            if (_slopeEnergy < 0)
+            {
+                _slopeEnergy = 0;
+            }
+            
+
+            return Vector3.Angle(_characterUp, normal) <= MaxStableSlopeAngle + _slopeEnergy;
         }
 
         /// <summary>

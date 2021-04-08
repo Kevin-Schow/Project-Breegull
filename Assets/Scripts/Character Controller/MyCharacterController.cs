@@ -62,12 +62,15 @@ namespace KinematicCharacterController
 
         [Header("Stable Movement")]
         public float MaxStableMoveSpeed = 10f;
+        public float MinStableMoveSpeed = 4f;
+        public float AccelerationSpeed = 0f;
+        public float AccelerationRate = 1f;
         public float StableMovementSharpness = 15f;
         public float OrientationSharpness = 10f;
-        public float MaxSlopeRunEnergy = 4f;
-        public float SlopeRunEnergy = 4f;
-        public float SlideSpeed = 5f;
-        public float SlideAngle = -0.2f;
+        // public float MaxSlopeRunEnergy = 4f;  // DELETE?
+        // public float SlopeRunEnergy = 4f;
+        // public float SlideSpeed = 5f;
+        // public float SlideAngle = -0.2f;
         public OrientationMethod OrientationMethod = OrientationMethod.TowardsCamera;
 
         [Header("Air Movement")]
@@ -83,6 +86,7 @@ namespace KinematicCharacterController
         public float JumpScalableForwardSpeed = 10f;
         public float JumpPreGroundingGraceTime = 0f;
         public float JumpPostGroundingGraceTime = 0f;
+        public float WallJumpClamp = 1.5f;
 
         [Header("Ladder Climbing")]
         public float ClimbingSpeed = 4f;
@@ -95,6 +99,7 @@ namespace KinematicCharacterController
         public float SwimmingSpeed = 4f;
         public float SwimmingMovementSharpness = 3;
         public float SwimmingOrientationSharpness = 2f;
+        public float WaterJumpMultiplier = 1.5f;
 
         [Header("Charging")]
         public float ChargeSpeed = 25f;
@@ -114,6 +119,9 @@ namespace KinematicCharacterController
         public Transform MeshRoot;
         public Transform CameraFollowPoint;
         public float CrouchedCapsuleHeight = 1f;
+        public LayerMask BoosterLayer;
+        public LayerMask SpringLayer;
+        public float SpringBounceAmount = 25f;
 
         public CharacterState CurrentCharacterState { get; private set; }
 
@@ -134,6 +142,8 @@ namespace KinematicCharacterController
         private bool _shouldBeCrouching = false;
         private bool _isCrouching = false;
         private Collider _waterZone;
+        private bool _isTouchingSpring = false;
+        private bool _isTouchingBooster = false;
 
         private Vector3 _currentChargeVelocity;
         private bool _isStopped;
@@ -221,6 +231,7 @@ namespace KinematicCharacterController
                 case CharacterState.Swimming:
                     {
                         Motor.SetGroundSolvingActivation(false);
+                        AccelerationSpeed = MinStableMoveSpeed;
                         break;
                     }
                 case CharacterState.Climbing:
@@ -339,6 +350,7 @@ namespace KinematicCharacterController
                 case CharacterState.Default:
                     {
                         // Move and look inputs
+                        //_moveInputVector = Quaternion.Euler(0, cameraPlanarRotation.eulerAngles.y, 0) * moveInputVector;
                         _moveInputVector = cameraPlanarRotation * moveInputVector;
                         _lookInputVector = cameraPlanarDirection;
 
@@ -411,9 +423,35 @@ namespace KinematicCharacterController
         /// </summary>
         public void BeforeCharacterUpdate(float deltaTime)
         {
+            // Handle detecting Springs
+            // Bug: top collision gives different results than side collisions
+            if (_isTouchingSpring == false && Motor.CharacterOverlap(Motor.TransientPosition, Motor.TransientRotation, _probedColliders, SpringLayer, QueryTriggerInteraction.Collide) > 0)
+            {
+                Motor.ForceUnground(0.2f);
+                AddVelocity(Vector3.up * SpringBounceAmount);
+                //TransitionToState(CharacterState.Charging);
+                _isTouchingSpring = true;
+            }
+            else
+            {
+                _isTouchingSpring = false;
+            }
+
+            // Handle detecting Booster
+            if (_isTouchingBooster == false && Motor.CharacterOverlap(Motor.TransientPosition, Motor.TransientRotation, _probedColliders, BoosterLayer, QueryTriggerInteraction.Collide) > 0)
+            {
+                Motor.ForceUnground(0.2f);
+                TransitionToState(CharacterState.Charging);
+                _isTouchingBooster = true;
+            }
+            else
+            {
+                _isTouchingBooster = false;
+            }
+
             // Handle detecting water surfaces
             {
-                // Do a character overlap test to detect water surfaces
+                // Do a character overlap check to detect water surfaces
                 if (Motor.CharacterOverlap(Motor.TransientPosition, Motor.TransientRotation, _probedColliders, WaterLayer, QueryTriggerInteraction.Collide) > 0)
                 {
                     // If a water surface was detected
@@ -563,42 +601,33 @@ namespace KinematicCharacterController
 
                             // Reorient velocity on slope
                             currentVelocity = Motor.GetDirectionTangentToSurface(currentVelocity, effectiveGroundNormal) * currentVelocityMagnitude;
-                            
-                            // TEST
-                            // if (effectiveGroundNormal[2] < SlideAngle && SlopeRunEnergy > 0)
-                            // {
-                            //     SlopeRunEnergy -= 0.1f;
-                            // }
-                            // if (SlopeRunEnergy < 0)
-                            // {
-                            //     SlopeRunEnergy = 0;
-                            // }
-                            // if (SlopeRunEnergy > MaxSlopeRunEnergy)
-                            // {
-                            //     SlopeRunEnergy = MaxSlopeRunEnergy;
-                            // }
-                            // if (effectiveGroundNormal[2] < SlideAngle) //&& SlopeRunEnergy == 0
-                            // {
-                            //     _isSliding = true;
-                            // }
-                            // if (effectiveGroundNormal[2] >= 0)
-                            // {
-                            //     _isSliding = false;
-                            // }
-                            // if (SlopeRunEnergy < MaxSlopeRunEnergy && _isSliding == false)
-                            // {
-                            //     SlopeRunEnergy += 0.1f;
-                            // }
-                            // if (_isSliding == true && SlopeRunEnergy == 0)
-                            // {
-                            //     // currentVelocity = Motor.GetDirectionTangentToSurface(currentVelocity, effectiveGroundNormal + Gravity);
-                            //     currentVelocity += effectiveGroundNormal * SlideSpeed;
-                            // }
 
                             // Calculate target velocity
                             Vector3 inputRight = Vector3.Cross(_moveInputVector, Motor.CharacterUp);
                             Vector3 reorientedInput = Vector3.Cross(effectiveGroundNormal, inputRight).normalized * _moveInputVector.magnitude;
-                            Vector3 targetMovementVelocity = reorientedInput * MaxStableMoveSpeed;
+                            // Vector3 targetMovementVelocity = reorientedInput * MaxStableMoveSpeed;  // Old Version
+
+                            // TEST
+                            // Acceleration / Momentum handling
+                            if (AccelerationSpeed < MaxStableMoveSpeed && _moveInputVector.sqrMagnitude > 0f)
+                            {
+                                AccelerationSpeed += AccelerationRate * Time.deltaTime;
+                            }
+                            if (_moveInputVector.sqrMagnitude == 0f)
+                            {
+                                AccelerationSpeed -= AccelerationRate * Time.deltaTime * 3f;
+                            }
+                            if (AccelerationSpeed > MaxStableMoveSpeed)
+                            {
+                                AccelerationSpeed = MaxStableMoveSpeed;
+                            }
+                            if (AccelerationSpeed < MinStableMoveSpeed)
+                            {
+                                AccelerationSpeed = MinStableMoveSpeed;
+                            }
+
+                            Vector3 targetMovementVelocity = reorientedInput * AccelerationSpeed;
+                            
 
                             // Smooth movement Velocity
                             currentVelocity = Vector3.Lerp(currentVelocity, targetMovementVelocity, 1f - Mathf.Exp(-StableMovementSharpness * deltaTime));
@@ -637,6 +666,16 @@ namespace KinematicCharacterController
                                         Vector3 perpenticularObstructionNormal = Vector3.Cross(Vector3.Cross(Motor.CharacterUp, Motor.GroundingStatus.GroundNormal), Motor.CharacterUp).normalized;
                                         addedVelocity = Vector3.ProjectOnPlane(addedVelocity, perpenticularObstructionNormal);
                                     }
+                                }
+
+                                // Handle Acceleration in air
+                                if (AccelerationSpeed < MaxStableMoveSpeed && _moveInputVector.sqrMagnitude > 0f)
+                                {
+                                    AccelerationSpeed += AccelerationRate * Time.deltaTime;
+                                }
+                                if (AccelerationSpeed > MaxStableMoveSpeed)
+                                {
+                                    AccelerationSpeed = MaxStableMoveSpeed;
                                 }
 
                                 // Apply added velocity
@@ -678,9 +717,8 @@ namespace KinematicCharacterController
                                 Vector3 jumpDirection = Motor.CharacterUp;
                                 if (_canWallJump)
                                 {
-                                    // Wall jump, Vector3.up adds vertical velocity
-                                    // jumpDirection = _wallJumpNormal + Vector3.up;
-                                    jumpDirection = Vector3.ClampMagnitude(_wallJumpNormal + Vector3.up, 1);
+                                    // Wall jump
+                                    jumpDirection = Vector3.ClampMagnitude(_wallJumpNormal + Vector3.up, WallJumpClamp);
                                 }
                                 else if (Motor.GroundingStatus.FoundAnyGround && !Motor.GroundingStatus.IsStableOnGround)
                                 {
@@ -742,7 +780,7 @@ namespace KinematicCharacterController
                                 // Jump out of water
                                 if (_jumpRequested)
                                 {
-                                    smoothedVelocity += (Motor.CharacterUp * JumpUpSpeed) - Vector3.Project(currentVelocity, Motor.CharacterUp);
+                                    smoothedVelocity += (Motor.CharacterUp * JumpUpSpeed * WaterJumpMultiplier) - Vector3.Project(currentVelocity, Motor.CharacterUp);
                                 }
                             }
                         }
@@ -832,7 +870,7 @@ namespace KinematicCharacterController
                         // Handle uncrouching
                         if (_isCrouching && !_shouldBeCrouching)
                         {
-                            // Do an overlap test with the character's standing height to see if there are any obstructions
+                            // Do an overlap check with the character's standing height to see if there are any obstructions
                             Motor.SetCapsuleDimensions(0.5f, 2f, 1f);
                             if (Motor.CharacterOverlap(
                                 Motor.TransientPosition,
