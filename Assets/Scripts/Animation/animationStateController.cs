@@ -20,7 +20,7 @@ public class animationStateController : MonoBehaviour
 
     void Update()
     {
-        bool forwardPressed =  Input.GetKeyDown(KeyCode.W);
+        bool forwardPressed = Input.GetKeyDown(KeyCode.W);
 
         // Accelerate/Decelerate forward movement
         if (forwardPressed && velocity < 1.0f)

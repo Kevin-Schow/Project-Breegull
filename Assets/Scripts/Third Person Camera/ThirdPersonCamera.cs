@@ -202,7 +202,7 @@ namespace ThirdPersonCameraWithLockOn
 
 		[SerializeField]
 		[Tooltip("Key codes for the lock on function")]
-		private KeyCode[] lockOnKeyCodes = new KeyCode[]{KeyCode.LeftShift, KeyCode.Joystick1Button5};
+		private KeyCode[] lockOnKeyCodes = new KeyCode[]{KeyCode.LeftShift, KeyCode.Joystick1Button4};
 		public KeyCode[] LockOnKeyCodes
 		{
 			get { return lockOnKeyCodes; }

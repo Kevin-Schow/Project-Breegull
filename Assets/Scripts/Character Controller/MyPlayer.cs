@@ -87,14 +87,14 @@ namespace KinematicCharacterController
             characterInputs.MoveAxisForward = Input.GetAxisRaw(VerticalInput);
             characterInputs.MoveAxisRight = Input.GetAxisRaw(HorizontalInput);
             characterInputs.CameraRotation = CharacterCamera.transform.rotation; // OLD CAMERA
-            characterInputs.JumpDown = Input.GetKeyDown(KeyCode.Space);
-            characterInputs.JumpHeld = Input.GetKey(KeyCode.Space);
-            // characterInputs.JumpDown = Input.GetButtonDown("XboxA");
-            // characterInputs.JumpHeld = Input.GetButton("XboxA");
+            // characterInputs.JumpDown = Input.GetKeyDown(KeyCode.Space);
+            // characterInputs.JumpHeld = Input.GetKey(KeyCode.Space);
+            characterInputs.JumpDown = Input.GetButtonDown("XboxA");
+            characterInputs.JumpHeld = Input.GetButton("XboxA");
             characterInputs.CrouchDown = Input.GetKeyDown(KeyCode.C);
             characterInputs.CrouchUp = Input.GetKeyUp(KeyCode.C);
             characterInputs.CrouchHeld = Input.GetKey(KeyCode.C);
-            characterInputs.ChargingDown = Input.GetKeyDown(KeyCode.X);
+            characterInputs.ChargingDown = Input.GetButtonDown("XboxB");
             characterInputs.NoClipDown = Input.GetKeyUp(KeyCode.N);
             characterInputs.ClimbLadder = Input.GetKeyUp(KeyCode.F);
 
@@ -108,7 +108,7 @@ namespace KinematicCharacterController
             // }
 
             // Apply impulse
-            if (Input.GetKeyDown(KeyCode.V))
+            if (Input.GetButtonDown("XboxY"))
             {
                 Character.Motor.ForceUnground(0.2f);
                 Character.AddVelocity(Vector3.up * 20f);

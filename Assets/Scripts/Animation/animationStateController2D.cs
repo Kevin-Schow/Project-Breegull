@@ -132,8 +132,11 @@ public class animationStateController2D : MonoBehaviour
         bool strafeRightPressed = Input.GetKey(KeyCode.E);
         bool runPressed = Input.GetKey(KeyCode.R);
 
+        float HorizontalInput = Input.GetAxisRaw("Horizontal");
+        float VerticalInput = Input.GetAxisRaw("Vertical");
+
         // Moving if WASD pressed but not A and D or W and S
-        bool movePressed = forwardPressed || leftPressed || rightPressed || downPressed;
+        bool movePressed = forwardPressed || leftPressed || rightPressed || downPressed || HorizontalInput > 0 || HorizontalInput < 0 || VerticalInput > 0 || VerticalInput < 0;
         // TODO:  A or D, W or S
 
         // Swap runToggle

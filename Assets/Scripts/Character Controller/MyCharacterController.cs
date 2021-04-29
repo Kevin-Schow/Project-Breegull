@@ -77,6 +77,7 @@ namespace KinematicCharacterController
         public float MaxAirMoveSpeed = 15f;
         public float AirAccelerationSpeed = 15f;
         public float Drag = 0.1f;
+        public float GlideAmount = 0.6f;
 
         [Header("Jumping")]
         public bool AllowJumpingWhenSliding = false;
@@ -150,6 +151,8 @@ namespace KinematicCharacterController
         private bool _mustStopVelocity = false;
         private float _timeSinceStartedCharge = 0;
         private float _timeSinceStopped = 0;
+
+        private Vector3 velocityLastFrame;
 
         private Vector3 _wallJumpNormal;
         private Vector3 lastInnerNormal = Vector3.zero;
@@ -583,6 +586,7 @@ namespace KinematicCharacterController
                         if (Motor.GroundingStatus.IsStableOnGround)
                         {
                             float currentVelocityMagnitude = currentVelocity.magnitude;
+                            // DoubleJumpDragModifier[1] = 1f;
 
                             Vector3 effectiveGroundNormal = Motor.GroundingStatus.GroundNormal;
                             if (currentVelocityMagnitude > 0f && Motor.GroundingStatus.SnappingPrevented)
@@ -608,7 +612,7 @@ namespace KinematicCharacterController
                             // Vector3 targetMovementVelocity = reorientedInput * MaxStableMoveSpeed;  // Old Version
 
                             // TEST
-                            // Acceleration / Momentum handling
+                            // Acceleration handling
                             if (AccelerationSpeed < MaxStableMoveSpeed && _moveInputVector.sqrMagnitude > 0f)
                             {
                                 AccelerationSpeed += AccelerationRate * Time.deltaTime;
@@ -626,7 +630,37 @@ namespace KinematicCharacterController
                                 AccelerationSpeed = MinStableMoveSpeed;
                             }
 
+                            // Jump Request
+                            if (_jumpInputIsHeld) // inputs.JumpDown - Old
+                            {
+                                _timeSinceJumpRequested = 0f;
+                                _jumpRequested = true;
+                            }
+
+                            // TEST
+                            // Fall Speed on Double Jump
+                            // if(_VelocityUpOrDown == true && _jumpInputIsHeld)
+                            // {
+                            //     DoubleJumpDragModifier = 1f;
+                            // }
+                            // else if(_VelocityUpOrDown == false && _jumpInputIsHeld)
+                            // {
+                            //     DoubleJumpDragModifier = 200f;
+                            // }
+
                             Vector3 targetMovementVelocity = reorientedInput * AccelerationSpeed;
+
+                            velocityLastFrame = targetMovementVelocity;
+
+                            // Add or Remove Modifier if going up or down TEST
+                            // if (velocityLastFrame[1] > targetMovementVelocity[1])
+                            // {
+                            //     _VelocityUpOrDown = false;
+                            // }
+                            // else if (velocityLastFrame[1] < targetMovementVelocity[1])
+                            // {
+                            //     _VelocityUpOrDown = true;
+                            // }
                             
 
                             // Smooth movement Velocity
@@ -685,6 +719,40 @@ namespace KinematicCharacterController
                             // Gravity
                             currentVelocity += Gravity * deltaTime;
 
+                            // TEST
+                            // Fall Speed on Double Jump
+                            // if(_VelocityUpOrDown == true && _jumpInputIsHeld)
+                            // {
+                            //     DoubleJumpDragModifier = 1f;
+                            // }
+                            // else if(_VelocityUpOrDown == false && _jumpInputIsHeld)
+                            // {
+                            //     DoubleJumpDragModifier = 200f;
+                            // }
+
+                            // if (velocityLastFrame[1] > targetMovementVelocity[1])
+                            // {
+                            //     _VelocityUpOrDown = false;
+                            // }
+                            // else if (velocityLastFrame[1] < targetMovementVelocity[1])
+                            // {
+                            //     _VelocityUpOrDown = true;
+                            // }
+
+                            // TEST
+                            // Glide After Double Jump
+                            if (_doubleJumpConsumed && _jumpInputIsHeld && velocityLastFrame[1] > currentVelocity[1])
+                            {
+                                currentVelocity[1] += GlideAmount;
+                            }
+                            else
+                            {
+                                // currentVelocity[1] -= 1f;
+                            }
+
+                            // Double Jump Modifier
+                            // currentVelocity[1] = DoubleJumpDragModifier;
+
                             // Drag
                             currentVelocity *= (1f / (1f + (Drag * deltaTime)));
                         }
@@ -706,6 +774,9 @@ namespace KinematicCharacterController
                                     _jumpRequested = false;
                                     _doubleJumpConsumed = true;
                                     _jumpedThisFrame = true;
+
+                                    // Drag applied on double jump TEST
+                                    // DoubleJumpDragModifier = 20f;
                                 }
                             }
 
@@ -719,6 +790,9 @@ namespace KinematicCharacterController
                                 {
                                     // Wall jump
                                     jumpDirection = Vector3.ClampMagnitude(_wallJumpNormal + Vector3.up, WallJumpClamp);
+
+                                    // Allow Another Double Jump
+                                    _doubleJumpConsumed = false;
                                 }
                                 else if (Motor.GroundingStatus.FoundAnyGround && !Motor.GroundingStatus.IsStableOnGround)
                                 {
@@ -793,7 +867,7 @@ namespace KinematicCharacterController
                         // If we have stopped and need to cancel velocity, do it here
                         if (_mustStopVelocity)
                         {
-                            currentVelocity = Vector3.zero;
+                            // currentVelocity = Vector3.zero;
                             _mustStopVelocity = false;
                         }
 
